@@ -1,0 +1,15 @@
+F:\cswork\wordgames\wordPuzzle\bin\Debug\net6.0\wordPuzzle.exe
+F:\cswork\wordgames\wordPuzzle\bin\Debug\net6.0\wordPuzzle.deps.json
+F:\cswork\wordgames\wordPuzzle\bin\Debug\net6.0\wordPuzzle.runtimeconfig.json
+F:\cswork\wordgames\wordPuzzle\bin\Debug\net6.0\wordPuzzle.dll
+F:\cswork\wordgames\wordPuzzle\bin\Debug\net6.0\wordPuzzle.pdb
+F:\cswork\wordgames\wordPuzzle\obj\Debug\net6.0\wordPuzzle.csproj.AssemblyReference.cache
+F:\cswork\wordgames\wordPuzzle\obj\Debug\net6.0\wordPuzzle.GeneratedMSBuildEditorConfig.editorconfig
+F:\cswork\wordgames\wordPuzzle\obj\Debug\net6.0\wordPuzzle.AssemblyInfoInputs.cache
+F:\cswork\wordgames\wordPuzzle\obj\Debug\net6.0\wordPuzzle.AssemblyInfo.cs
+F:\cswork\wordgames\wordPuzzle\obj\Debug\net6.0\wordPuzzle.csproj.CoreCompileInputs.cache
+F:\cswork\wordgames\wordPuzzle\obj\Debug\net6.0\wordPuzzle.dll
+F:\cswork\wordgames\wordPuzzle\obj\Debug\net6.0\refint\wordPuzzle.dll
+F:\cswork\wordgames\wordPuzzle\obj\Debug\net6.0\wordPuzzle.pdb
+F:\cswork\wordgames\wordPuzzle\obj\Debug\net6.0\wordPuzzle.genruntimeconfig.cache
+F:\cswork\wordgames\wordPuzzle\obj\Debug\net6.0\ref\wordPuzzle.dll
