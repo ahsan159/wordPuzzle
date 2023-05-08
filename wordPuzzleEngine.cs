@@ -36,7 +36,7 @@ namespace wordPuzzle
             }
             else if(lvl==puzzleLevel.Beginner)
             {
-                maxWordLength = 10;
+                maxWordLength = 10; 
             }
             else if(lvl==puzzleLevel.Intermadiate)
             {
