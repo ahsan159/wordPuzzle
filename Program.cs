@@ -1,7 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //using System.Data;
+using wordPuzzle;
 
-namespace wordPuzzle
+namespace Program
 {
     class Program
     {
