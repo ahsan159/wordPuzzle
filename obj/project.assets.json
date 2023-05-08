@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\muhammadahsan\\.nuget\\packages\\": {}
+    "C:\\Users\\Ahsan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\cswork\\wordgames\\wordPuzzle\\wordPuzzle.csproj",
+      "projectUniqueName": "E:\\vscode\\wordPuzzle\\wordPuzzle\\wordPuzzle.csproj",
       "projectName": "wordPuzzle",
-      "projectPath": "F:\\cswork\\wordgames\\wordPuzzle\\wordPuzzle.csproj",
-      "packagesPath": "C:\\Users\\muhammadahsan\\.nuget\\packages\\",
-      "outputPath": "F:\\cswork\\wordgames\\wordPuzzle\\obj\\",
+      "projectPath": "E:\\vscode\\wordPuzzle\\wordPuzzle\\wordPuzzle.csproj",
+      "packagesPath": "C:\\Users\\Ahsan\\.nuget\\packages\\",
+      "outputPath": "E:\\vscode\\wordPuzzle\\wordPuzzle\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\muhammadahsan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Ahsan\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -46,8 +46,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -56,7 +55,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.311\\RuntimeIdentifierGraph.json"
       }
     }
   }

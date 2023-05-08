@@ -12,7 +12,9 @@ namespace wordPuzzle
             Console.WriteLine("Engine Started");
             for (int i = 0; i < 100; i++)
             {
-                Console.WriteLine(engine.getWord());
+                // Console.WriteLine(engine.getWord());
+                string[] str = engine.getPuzzle();
+                Console.WriteLine(str[0]+","+str[1]);
             }
         }        
         
