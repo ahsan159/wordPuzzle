@@ -11,14 +11,17 @@ namespace wordPuzzle;
     public class wordPuzzleEngine
     {
         // private int chances = 0;
+        private int attempt = 6;
         private List<string> words = new List<string>();
         private string lastWord = "";
         private string lastPuzzle = "";
+        //private Timer timer; future use
         public int max = -1;
         Random rnd = new Random();
         //puzzleLevel level = puzzleLevel.Beginner;
         int maxWordLength = 4;        
         int missingChars = 1;
+        string message = "initiate New";
         public wordPuzzleEngine()
         {
             Console.WriteLine("Engine Constructor");
@@ -28,6 +31,7 @@ namespace wordPuzzle;
             //level = puzzleLevel.Novice;
             maxWordLength = 10;
             missingChars = 3;
+            //timer = new Timer(getPuzzle);
         }
         ~wordPuzzleEngine()
         {
@@ -39,21 +43,25 @@ namespace wordPuzzle;
             {
                 maxWordLength = 4;
                 missingChars = 1;
+                attempt = 3;
             }
             else if (lvl == puzzleLevel.Beginner)
             {
                 maxWordLength = 6;
                 missingChars = 3;
+                attempt = 5;
             }
             else if (lvl == puzzleLevel.Intermadiate)
             {
                 maxWordLength = 10;
                 missingChars = 4;
+                attempt = 6;
             }
             else if (lvl == puzzleLevel.Expert)
             {
                 maxWordLength = 15;
                 missingChars = 5;
+                attempt = 7;
             }
         }
         public void loadDictionary(string str)
@@ -109,14 +117,29 @@ namespace wordPuzzle;
             lastWord = wordCorrect;
             lastPuzzle = wordPuzzle;
             // chances = 0;
+            attempt = missingChars + 2;
+            message = "Attempts Left: " + attempt.ToString();
             return retPuzzle;
         }        
         public bool checkPuzzle(string inWord)
         {
+            if (attempt-- == 0)
+            {
+                message = "initiate New";
+                return false;
+            }
             if (inWord.Equals(lastWord))
             {
                 return true;
             }
             return false;
+        }
+        public string getMessage()
+        {
+            return message;
+        }
+        public void setSeed(int i)
+        {
+            rnd = new Random(i);
         }
     }
