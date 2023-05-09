@@ -1,6 +1,6 @@
 
-namespace wordPuzzle
-{
+namespace wordPuzzle;
+
     public enum puzzleLevel
     {
         Novice,
@@ -10,11 +10,14 @@ namespace wordPuzzle
     }
     public class wordPuzzleEngine
     {
+        // private int chances = 0;
         private List<string> words = new List<string>();
+        private string lastWord = "";
+        private string lastPuzzle = "";
         public int max = -1;
         Random rnd = new Random();
         //puzzleLevel level = puzzleLevel.Beginner;
-        int maxWordLength = 4;
+        int maxWordLength = 4;        
         int missingChars = 1;
         public wordPuzzleEngine()
         {
@@ -39,18 +42,18 @@ namespace wordPuzzle
             }
             else if (lvl == puzzleLevel.Beginner)
             {
-                maxWordLength = 10;
+                maxWordLength = 6;
                 missingChars = 3;
             }
             else if (lvl == puzzleLevel.Intermadiate)
             {
-                maxWordLength = 20;
-                missingChars = 5;
+                maxWordLength = 10;
+                missingChars = 4;
             }
             else if (lvl == puzzleLevel.Expert)
             {
-                maxWordLength = 50;
-                missingChars = 10;
+                maxWordLength = 15;
+                missingChars = 5;
             }
         }
         public void loadDictionary(string str)
@@ -73,6 +76,7 @@ namespace wordPuzzle
                 retWord = words.ElementAt(wInt);
                 length = retWord.Length;
             }
+            lastWord = retWord;
             return retWord;
         }
         public string[] getPuzzle()
@@ -102,7 +106,17 @@ namespace wordPuzzle
                 wordPuzzle = wordPuzzle.Insert(i,"_");
             }
             retPuzzle[1] = wordPuzzle;
+            lastWord = wordCorrect;
+            lastPuzzle = wordPuzzle;
+            // chances = 0;
             return retPuzzle;
+        }        
+        public bool checkPuzzle(string inWord)
+        {
+            if (inWord.Equals(lastWord))
+            {
+                return true;
+            }
+            return false;
         }
     }
-}
