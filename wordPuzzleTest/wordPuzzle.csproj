@@ -6,10 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-    <ItemGroup>
+  <ItemGroup>
     <Reference Include="wordPuzzleEngine" >
-    <HintPath>./wordPuzzleEngine.dll</HintPath> 
+      <HintPath>./wordPuzzleEngine.dll</HintPath> 
     </Reference>
-    </ItemGroup>
+  </ItemGroup>
 
 </Project>

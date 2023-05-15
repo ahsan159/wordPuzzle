@@ -142,8 +142,4 @@ namespace wordPuzzle;
         {
             rnd = new Random(i);
         }
-        public int getSeed()
-        {
-            return rnd.getSeed();
-        }
     }
