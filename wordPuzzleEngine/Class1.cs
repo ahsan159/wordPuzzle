@@ -1,6 +1,14 @@
 
 namespace wordPuzzle;
 
+    public enum puzzleStatus
+    {
+        Unintialized,
+        Initialized,
+        Success,
+        BetterLuckNextTime,
+        Puzzle
+    }
     public enum puzzleLevel
     {
         Novice,
@@ -11,6 +19,7 @@ namespace wordPuzzle;
     public class wordPuzzleEngine
     {
         // private int chances = 0;
+        private puzzleStatus status = puzzleStatus.Unintialized;
         private int attempt = 6;
         private List<string> words = new List<string>();
         private string lastWord = "";
@@ -31,6 +40,7 @@ namespace wordPuzzle;
             //level = puzzleLevel.Novice;
             maxWordLength = 10;
             missingChars = 3;
+            status = puzzleStatus.Initialized;
             //timer = new Timer(getPuzzle);
         }
         ~wordPuzzleEngine()
@@ -63,6 +73,7 @@ namespace wordPuzzle;
                 missingChars = 5;
                 attempt = 7;
             }
+            status = puzzleStatus.Initialized;
         }
         public void loadDictionary(string str)
         {
@@ -89,7 +100,7 @@ namespace wordPuzzle;
         }
         public string[] getPuzzle()
         {
-            string wordCorrect = getWord();
+            string wordCorrect = getWord().ToUpper();
             string[] retPuzzle = new string[2];
             int minMissingChars = missingChars<wordCorrect.Length?missingChars:wordCorrect.Length-1;
             int[] missingPositions = new int[minMissingChars];
@@ -119,20 +130,28 @@ namespace wordPuzzle;
             // chances = 0;
             attempt = missingChars + 2;
             message = "Attempts Left: " + attempt.ToString();
+            status = puzzleStatus.Puzzle;
             return retPuzzle;
         }        
         public bool checkPuzzle(string inWord)
         {
             if (attempt-- == 0)
             {
+                status = puzzleStatus.BetterLuckNextTime;
                 message = "initiate New";
                 return false;
             }
             if (inWord.Equals(lastWord))
             {
+                status = puzzleStatus.Success;
                 return true;
             }
+            //status = puzzleStatus.BetterLuckNextTime;
             return false;
+        }
+        public puzzleStatus getStatus()
+        {
+            return status;
         }
         public string getMessage()
         {

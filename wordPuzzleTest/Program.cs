@@ -40,7 +40,18 @@ namespace Program
                         Console.WriteLine(e.Message);
                     }
                     Console.WriteLine(puzzle);
-                } while (!engine.checkPuzzle(puzzle));
+                    engine.checkPuzzle(puzzle);
+                    //puzzleLevel lvl = puzzleLevel.Novice;
+                    //puzzleStatus s = engine.getStatus();
+                } while (engine.getStatus()==puzzleStatus.Puzzle);
+                if (engine.getStatus() == puzzleStatus.Success)
+                {
+                    Console.WriteLine("WOW!!!");
+                }
+                else if (engine.getStatus() == puzzleStatus.BetterLuckNextTime)
+                {
+                    Console.WriteLine("Better Luck Next Time!");
+                }
                 Console.WriteLine("Continue?? (Press 0 to exit)");
                 int i = int.Parse(Console.ReadLine());
                 if (i == 0)
