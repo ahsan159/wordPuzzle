@@ -29,6 +29,7 @@ namespace Program
                 {
                     Console.Write(puzzle + " Enter Key: ");
                     char guess = char.Parse(Console.ReadLine());
+                    guess = guess.ToString().ToUpper().ElementAt(0);
                     int index = puzzle.IndexOf('_');
                     try
                     {
