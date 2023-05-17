@@ -1,0 +1,20 @@
+﻿<Window x:Class="wordPuzzleGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wordPuzzleGUI"
+        mc:Ignorable="d"
+        Title="Guess the Word" Height="450" Width="800">
+    <Grid>
+    <Button Content="Click Me!" HorizontalAlignment="Left" Margin="616,21,0,0" VerticalAlignment="Top" Height="46" Width="159" Click="Button_Click"/>
+    <TextBox Name="wordText2" HorizontalAlignment="Left" Margin="467,21,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.95,-0.186" Height="45"/>
+    <!-- <TextBox Name="puzzleText2" HorizontalAlignment="Center" Margin="0,130,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="592" Height="117"/> -->
+    <WrapPanel Name="puzzlePanel" HorizontalAlignment="Center" Height="116" Margin="0,274,0,0" VerticalAlignment="Top" Width="592"/>
+        <!-- <Button x:Name="getPuzzle" Content="Click Me!" HorizontalAlignment="Left" Margin="606,55,0,0" VerticalAlignment="Top" Width="120" Height="40"/>
+        <TextBox x:Name ="puzzleText" HorizontalAlignment="Left" Margin="78,55,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="40"/> -->
+        <!-- <TextBlock Name="wordText" HorizontalAlignment="Left" Margin="294,55,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="180
+                   "/> -->
+
+    </Grid>
+</Window>
