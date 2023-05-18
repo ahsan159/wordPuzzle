@@ -50,7 +50,7 @@ namespace wordPuzzleGUI
                 letterBox[i] = new TextBox();
                 letterBox[i].Width = (int)boxWidth;
                 letterBox[i].Margin = new Thickness(5,0,5,0);
-                letterBox[i].CharacterCasing = CharacterCasing.Upper;
+                letterBox[i].CharacterCasing = CharacterCasing.Upper;                
                  if(str[1].ElementAt(i)!='_')
                  {
                     letterBox[i].Text = str[1].ElementAt(i).ToString();
@@ -85,6 +85,25 @@ namespace wordPuzzleGUI
             else if (status == puzzleStatus.BetterLuckNextTime)
             {
                 MessageBox.Show("Better Luck Next Time");
+            }
+        }
+        private void rBClicked(object sender, RoutedEventArgs args)
+        {
+            if (rBNovice.IsChecked.Value)
+            {
+                engine.setLevel(puzzleLevel.Novice);
+            }
+            else if(rBBeginner.IsChecked.Value)
+            {
+                engine.setLevel(puzzleLevel.Beginner);
+            }
+            else if(rBAdvance.IsChecked.Value)
+            {
+                engine.setLevel(puzzleLevel.Intermadiate);
+            }
+            else if (rBExpert.IsChecked.Value)
+            {
+                engine.setLevel(puzzleLevel.Expert);
             }
         }
     }    

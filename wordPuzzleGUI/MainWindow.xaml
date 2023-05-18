@@ -10,11 +10,14 @@
     <Button Content="Click Me!" HorizontalAlignment="Left" Margin="616,21,0,0" VerticalAlignment="Top" Height="46" Width="159" Click="Button_Click"/>
     <TextBox Name="wordText2" HorizontalAlignment="Left" Margin="467,21,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.95,-0.186" Height="45"/>
     <!-- <TextBox Name="puzzleText2" HorizontalAlignment="Center" Margin="0,130,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="592" Height="117"/> -->
-    <WrapPanel Name="puzzlePanel" HorizontalAlignment="Center" Height="116" Margin="0,274,0,0" VerticalAlignment="Top" Width="592"/>
+    <WrapPanel Name="puzzlePanel" HorizontalAlignment="Center" Height="116" Margin="0,174,0,0" VerticalAlignment="Top" Width="592"/>
         <!-- <Button x:Name="getPuzzle" Content="Click Me!" HorizontalAlignment="Left" Margin="606,55,0,0" VerticalAlignment="Top" Width="120" Height="40"/>
         <TextBox x:Name ="puzzleText" HorizontalAlignment="Left" Margin="78,55,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="40"/> -->
         <!-- <TextBlock Name="wordText" HorizontalAlignment="Left" Margin="294,55,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="180
                    "/> -->
-
+        <RadioButton Name="rBNovice" Content="Novice" HorizontalAlignment="Left" Margin="46,44,0,0" VerticalAlignment="Top" IsChecked="False" Checked="rBClicked"/>
+        <RadioButton Name="rBBeginner" Content="Begineer" HorizontalAlignment="Left" Margin="126,44,0,0" VerticalAlignment="Top" IsChecked="False" Checked="rBClicked"/>
+        <RadioButton Name="rBAdvance" Content="Advanced" HorizontalAlignment="Left" Margin="214,44,0,0" VerticalAlignment="Top" IsChecked="True" Checked="rBClicked"/>
+        <RadioButton Name="rBExpert" Content="Expert" HorizontalAlignment="Left" Margin="310,44,0,0" VerticalAlignment="Top" IsChecked="False" Checked="rBClicked"/>
     </Grid>
 </Window>

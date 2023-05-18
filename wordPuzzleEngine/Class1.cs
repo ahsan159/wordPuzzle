@@ -31,6 +31,8 @@ public class wordPuzzleEngine
     int maxWordLength = 4;
     int missingChars = 1;
     string message = "initiate New";
+    System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+    //int timerInterval = 20000;
     public wordPuzzleEngine()
     {
         Console.WriteLine("Engine Constructor");
@@ -41,6 +43,7 @@ public class wordPuzzleEngine
         maxWordLength = 10;
         missingChars = 3;
         status = puzzleStatus.Initialized;
+        timer.Stop();
         //timer = new Timer(getPuzzle);
     }
     ~wordPuzzleEngine()
@@ -53,24 +56,24 @@ public class wordPuzzleEngine
         {
             maxWordLength = 4;
             missingChars = 1;
-            attempt = 3;
+            attempt = 4;
         }
         else if (lvl == puzzleLevel.Beginner)
         {
             maxWordLength = 6;
-            missingChars = 3;
+            missingChars = 2;
             attempt = 5;
         }
         else if (lvl == puzzleLevel.Intermadiate)
         {
             maxWordLength = 10;
-            missingChars = 4;
+            missingChars = 3;
             attempt = 6;
         }
         else if (lvl == puzzleLevel.Expert)
         {
             maxWordLength = 15;
-            missingChars = 5;
+            missingChars = 4;
             attempt = 7;
         }
         status = puzzleStatus.Initialized;
@@ -131,6 +134,9 @@ public class wordPuzzleEngine
         attempt = missingChars + 2;
         message = "Attempts Left: " + attempt.ToString();
         status = puzzleStatus.Puzzle;
+        timer.Interval = 20000;
+        timer.Tick += new EventHandler(timerTick);
+        timer.Start();
         return retPuzzle;
     }
     public bool checkPuzzle(string inWord)
@@ -163,5 +169,10 @@ public class wordPuzzleEngine
     public void setSeed(int i)
     {
         rnd = new Random(i);
+    }
+    protected void timerTick(object sender, EventArgs e)
+    {
+        timer.Stop();
+        status = puzzleStatus.BetterLuckNextTime;
     }
 }
